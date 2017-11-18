@@ -1,0 +1,629 @@
+a{
+  color: #3E3E3D;
+  font-size: 16px;
+  transition: all .2s linear;
+  text-decoration: none;
+}
+a:hover{
+  color: #EF3C13;
+  text-decoration: none;
+}
+.none{display: none};
+.block{display: block};
+ul{
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  li{
+    padding: 0px;
+    margin: 0px;
+  }
+}
+
+.flex{   /* OLD - Android 4.4- */
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;
+}
+.warp{
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.between{
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+}
+.align{
+  -webkit-box-align: center;
+  /* 12版 */
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+}
+#container{
+  width: 100%;
+  header{
+    width: 1200px;
+    height: 46px;
+    padding-top: 26px;
+    margin: 0 auto;
+    justify-content: space-between;
+    >div:first-child{
+      width: 152px;
+      height: 23px;
+      background: url("../img/sprite/index.png")no-repeat;
+    }
+    #ul{
+      li{
+        width: 86.5px;
+        text-align: center;
+      }
+      width: 65%;
+      li:first-child{
+        a{color: #EF3C13}
+      }
+    }
+    >div:last-child{
+      width: 13%;
+      >i{
+        display: inline-block;
+        position: relative;
+        line-height: 9px;
+        width: 28px;
+        height: 28px;
+        font-style: normal;
+        background: url("../img/sprite/index.png")no-repeat -170px 0px;
+        >a{
+          position: absolute;
+          width: 40px;
+          margin-left: -5px;
+          line-height: 28px;
+          text-align: center;
+          background: #fff;
+          border: 1px solid #eee;
+        }
+        #my{
+          position: absolute;
+          z-index: 1;
+          top: 27px;
+          left: -13px;
+          width: 100px;
+          border: 1px solid #ddd;
+          border-top: none;
+          background: #fff;
+          border-radius: 5px;
+          li{
+            line-height: 34px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            font-size: 14px;
+          }
+          li:hover{
+            color: #00D2FF;
+            cursor: pointer;
+          }
+        }
+      }
+      >i:hover{
+        color: #3E3E3D;
+      }
+      >a:last-child{
+        >span:first-child{
+          display: inline-block;
+          width: 46px;
+          text-align: center;
+          height: 20px;
+          background: url("../img/sprite/index.png")no-repeat -194px 0px;
+        }
+        >span:last-child{
+          line-height: 30px;
+        }
+      }
+    }
+  }
+  #carousel{
+    width: 1200px;
+    margin: 20px auto;
+    img:hover{
+      cursor: pointer;
+    }
+    #c_bottom{
+      height: 208px;
+      width: 50%;
+      div{
+        height: 176px;
+        margin-right: 10px;
+        margin-top: 16px;
+        div{
+          width: 292px;
+          span{
+            text-align: center;
+            display: inline-block;
+            width: 100%;
+          }
+        }
+        >div:hover{
+          transform: translate(0,-5px);
+          box-shadow: 0px 0px 8px 2px #aaa;
+          transition: all .2s linear;
+          color: #3E3E3D;
+        }
+      }
+    }
+  }
+  #body{
+    width: 100%;
+    background: #F5F5F5;
+    #product{
+      height: 312px;
+      width: 1200px;
+      margin: 0 auto;
+      >div:first-child{
+        text-align: left;
+        height: 64px;
+        padding-top: 26px;
+        width: 100%;
+        font-size: 20px;
+      }
+      >div{
+        width: 100%;
+        height: 270px;
+        text-align: center;
+        >div{
+          position: relative;
+          div{
+            position: absolute;
+            width: 100%;
+            height: 269px;
+            z-index: 2;
+          }
+          img{
+            position: relative;
+            z-index: 1;
+          }
+          a{
+            position: absolute;
+            width: 100%;
+            left: 2%;
+            top: 69%;
+            z-index: 2;
+            button{
+              position: absolute;
+              left: 70px;
+              top: 21px;
+              opacity: 0;
+              background: #fff;
+              border: 1px solid #E0E0E0;
+              padding: 2px 4px;
+              font-size: 12px;
+            }
+            button:hover{
+              background: #eee;
+              cursor: pointer;
+            }
+          }
+        }
+        >div{border-bottom: 2px solid #fff}
+        >div:first-child{
+          border-color: #00D1FF;
+        }
+        >div:nth-child(2){
+          border-color: #FFC71E;
+        }
+        >div:nth-child(3){
+          border-color: #00D1FF;
+        }
+        >div:nth-child(4){
+          border-color: #894CC6;
+        }
+        >div:nth-child(5){
+          border-color: #FFC71E;
+        }
+        >div:nth-child(6){
+          border-color: #E53935;
+        }
+        >div:hover{
+          div{
+            background: rgba(200,200,200,.1);
+            z-index: 20;
+            cursor: pointer;
+            transition: all .5s linear;
+          }
+          a{
+            color: #EF3C13;
+          }
+          button{
+            opacity: 1;
+            transition: all .5s linear;
+          }
+        }
+      }
+    }
+    #content{
+      width: 1200px;
+      height: 440px;
+      margin: 0 auto;
+      >div:first-child{
+        height: 64px;
+        width: 100%;
+        font-size: 20px;
+        padding-top: 26px;
+        margin-top: 26px;
+      }
+      >div:nth-child(2){
+        >div:first-child{
+          a{
+            display: block;
+            height: 372px;
+            margin-top: -10px;
+          }
+        }
+        >div:not(:first-child){
+          width: 230px;
+          height: 372px;
+          background: #fff;
+          a{
+            display: inline-block;
+            margin: 0 40px;
+            div{
+              width: 100%;
+              text-align: center;
+              margin: 20px 0;
+              p{
+                font-size: 14px;
+                color: #333;
+                margin: 5px 0;
+              }
+              span{
+                font-size: 12px;
+                color: #999;
+              }
+            }
+            >p{
+              margin: 20px 0;
+              width: 100%;
+              text-align: center;
+            }
+          }
+        }
+        >div:nth-child(2){
+          >a>p{
+            color: #00D2FF;
+          }
+        }
+        >div:nth-child(3){
+          >a>p{
+            color: #FFC71E;
+          }
+        }
+        >div:nth-child(4){
+          >a>p{
+            color: #894CC6;
+          }
+        }
+        >div:nth-child(5){
+          >a>p{
+            color: #E53935;
+          }
+        }
+        >div:hover{
+          transform: translateY(-5px);
+          box-shadow: 0px 0px 15px 2px #bbb;
+          transition: all .3s linear;
+          a{
+            div{
+              p{color:#EF3C13}
+            }
+          }
+        }
+      }
+    }
+    #evaluating{
+      width: 1200px;
+      height: 440px;
+      margin: 0 auto;
+      >div:first-child{
+        height: 64px;
+        width: 100%;
+        font-size: 20px;
+        padding-top: 26px;
+      }
+      >div:nth-child(2){
+        div{
+          width: 300px;
+          margin-right: 15px;
+
+          a{
+            padding: 5px;
+            display: inline-block;
+            background: #fff;
+            width:300px;
+            height: 376px;
+            color: #999;
+            h3{
+              font-size: 16px;
+              color: #333;
+            }
+            p{
+              font-size: 14px;
+            }
+            span{
+              font-size: 12px;
+            }
+            span:last-child{
+              float: right;
+              margin-right: 10px;
+              font-size: 18px;
+            }
+          }
+        }
+        >div:hover{
+          transform: translate(0,-5px);
+          box-shadow: 0px 0px 8px 2px #aaa;
+          transition: all .2s linear;
+          color: #3E3E3D;
+          span:last-child{
+            color: #EF3C13;
+          }
+        }
+      }
+    }
+    #video{
+      width: 1200px;
+      height: 265px;
+      margin: 0 auto;
+      >div:first-child{
+        height: 42px;
+        width: 100%;
+        font-size: 20px;
+        padding-top: 26px;
+      }
+      >div:nth-child(2){
+        div{
+          width: 290px;
+          height: 192px;
+          margin-right: 15px;
+          position: relative;
+          div{
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,.4);
+            position: absolute;
+            z-index: 2;
+            span{
+              display: inline-block;
+              position: absolute;
+              left: 43%;
+              top: 43%;
+              width: 38px;
+              height: 38px;
+              background: url("../img/sprite/index.png")no-repeat -373px 0;
+            }
+          }
+          a{
+            position: relative;
+            z-index: 1;
+            display: inline-block;
+            background: #fff;
+            width: 100%;
+            height: 100%;
+          }
+        }
+        >div:hover{
+          transform: translate(0,-5px);
+          box-shadow: 0px 0px 8px 2px #aaa;
+          transition: all .2s linear;
+          color: #3E3E3D;
+          span{
+            background: url("../img/sprite/index.png")no-repeat -420px 0;
+          }
+        }
+      }
+    }
+  }
+  footer{
+    width: 100%;
+    height: 431px;
+    >div{
+      margin: 0 auto;
+      width: 1200px;
+      height: 100%;
+      >div:first-child{
+        width: 100%;
+        height: 176px;
+        padding: 50px 0;
+        ul{
+          li{
+            width: 240px;
+            height: 76px;
+            text-align: center;
+            div{
+              i{
+                margin: 0 auto;
+                display: block;
+                width: 42px;
+                height: 42px;
+                margin-bottom: 20px;
+              }
+            }
+          }
+          li:first-child{
+            i{
+              background: url("../img/sprite/index.png")no-repeat -6px -60px;
+            }
+          }
+          li:nth-child(2){
+            i{
+              background: url("../img/sprite/index.png")no-repeat -58px -60px;
+            }
+          }
+          li:nth-child(3){
+            i{
+              background: url("../img/sprite/index.png")no-repeat -144px -60px;
+            }
+          }
+          li:nth-child(4){
+            i{
+              background: url("../img/sprite/index.png")no-repeat -209px -60px;
+            }
+          }
+          li:nth-child(5){
+            i{
+              background: url("../img/sprite/index.png")no-repeat -269px -60px;
+            }
+          }
+        }
+      }
+      >div:nth-child(2){
+        width: 100%;
+        height: 215px;
+        >div:first-child{
+          width: 922px;
+          padding-left: 70px;
+          height: 215px;
+          border-right: 2px solid #E8E5E5;
+          >div:first-child{
+            dl{
+              width: 120px;
+              height: 110px;
+              dt{
+                padding-bottom: 10px;
+                font-size: 13px;
+                color: #000;
+                font-weight: 300;
+                font-family: Arial,Microsoft Yahei,Helvetica,sans-serif;
+              }
+              dd{
+                margin-bottom: 5px;
+                a{
+                  font-size: 10px;
+                  color: #999;
+                }
+              }
+            }
+            dl:nth-child(6),dl:last-child{
+              margin-top: -2px;
+              dd{
+                display: block;
+                width: 70px;
+                height: 70px;
+                background: url("../img/sprite/index.png")no-repeat -527px -3px;
+              }
+            }
+            dl:last-child{
+              dd{
+                background: url("../img/sprite/index.png")no-repeat -600px -3px;
+              }
+            }
+          }
+          >div:nth-child(2){
+            width: 503px;
+            padding-right: 30px;
+            >p:first-child{
+              a{
+                width: 50px;
+                padding: 0 10px;
+                font-size: 10px;
+                color: #999;
+              }
+              a:not(:last-child){
+                border-right: 1px solid #999;
+              }
+            }
+            >p:nth-child(2){
+              color: #999;
+              position: relative;
+              span{
+                position: absolute;
+                left: 520px;
+                top: 2px;
+                display: inline-block;
+                width: 83px;
+                height: 30px;
+                background: url("../img/sprite/index.png")no-repeat  -327px -70px;
+              }
+            }
+          }
+        }
+        >div:nth-child(2){
+          width: 243px;
+          height: 114px;
+          padding: 20px 80px 0 0;
+          margin-left: 38px;
+         div{
+           text-align: center;
+           p{
+             font-size: 20px;
+             font-weight: 800;
+             color: #EF3C13;
+           }
+           >span{
+             color: #666;
+             font-size: 14px;
+             display: block;
+           }
+           >a{
+             display: inline-block;
+             position: relative;
+             height: 28px;
+             width: 122px;
+             padding-left: 10px;
+             margin: 10px 19.5px;
+             font-size: 12px;
+             color: #EF3C13;
+             border: 1px solid #EF3C13;
+             line-height: 28px;
+             text-align: center;
+             span{
+               position: absolute;
+               top: 8px;
+               left: 10px;
+               display: inline-block;
+               width: 13px;
+               height: 13px;
+               background: url("../img/sprite/1.png")no-repeat -2px -3px;
+             }
+           }
+           >a:hover{
+             background: #F5F5F5;
+           }
+         }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

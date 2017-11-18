@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/jquery-1.11.3.js"></script>
+<!--     <script src="js/angular.js"></script> -->
+<!--     <script src="js/angular-animate.js"></script> -->
+<!--     <script src="js/angular-route.js"></script> -->
+    <link rel="stylesheet" href="css/login.css"/>
+</head>
+<style>
+    .title{opacity: 0}
+</style>
+<body>
+<div id="all"></div>
+
+<div id="enter">
+    <p>登录</p>
+
+    <form id="Form">
+        <div>
+            <p id="etitle" class="title">登录失败，账号或者密码错误</p>
+            <span></span>
+            <input type="tel" placeholder="输入手机号" id="tel" required/>
+        </div>
+        <div>
+            <span></span>
+            <input type="text" required id="pwd" placeholder="输入密码"/>
+        </div>
+        <div>
+            <input type="checkbox"  required/>
+            <a>30天内自动登录</a>
+            <a href="#">找回密码</a>
+        </div>
+        <div>
+            <input type="submit" id="sub" value="登 录"/>
+        </div>
+        <div>
+            <div>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+            </div>
+            <div><a href="login.html">立刻注册</a></div>
+        </div>
+    </form>
+</div>
+<script>
+    $("#all").load("login/login.html");
+    $("#sub").click(function(){
+        var tel = $('#tel').val();
+        var pwd = $('#pwd').val();
+        //console.log('准备开始执行ajax');
+        $.ajax({
+            type:"POST",
+            url:"data/enter.php",
+            data:{
+                tel:tel,pwd:pwd
+            },
+            success:function(data){
+                //alert(data);
+                if(Number(data) > 0){
+                    setInterval(function () {
+                        location.replace(`index.html?"tel":${tel},"pwd":"${pwd}"
+												`);
+
+                    },2000);
+                }else{
+                    $('#etitle').removeClass('title');
+                }
+            },
+            error:function(){
+                alert("登录失败-1");
+            }
+        });
+    });
+</script>
+</body>
+</html>
